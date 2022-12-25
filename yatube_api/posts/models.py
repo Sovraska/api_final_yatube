@@ -53,10 +53,6 @@ class Post(models.Model):
         _text_limit = 15
         return self.text[:_text_limit]
 
-    class Meta:
-        verbose_name = 'Пост'
-        verbose_name_plural = "Посты"
-        ordering = ('-pub_date',)
 
 
 class Comment(models.Model):

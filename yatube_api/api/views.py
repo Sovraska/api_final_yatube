@@ -40,6 +40,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 class GroupsViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly, ]
 
 
 class FollowViewSet(viewsets.ModelViewSet):

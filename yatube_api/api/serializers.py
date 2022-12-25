@@ -22,9 +22,9 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-    author = SlugRelatedField(
-        slug_field='username',
-        read_only=True
+    author = serializers.SlugRelatedField(
+        read_only=True,
+        slug_field='username'
     )
 
     class Meta:
