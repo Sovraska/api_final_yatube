@@ -54,7 +54,6 @@ class Post(models.Model):
         return self.text[:_text_limit]
 
 
-
 class Comment(models.Model):
     post = models.ForeignKey(
         Post,
