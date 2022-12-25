@@ -24,7 +24,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
-    permission_classes = [IsAuthorOrReadOnly, IsAuthenticatedOrReadOnly,]
+    permission_classes = [IsAuthorOrReadOnly, IsAuthenticatedOrReadOnly, ]
 
     def perform_create(self, serializer):
         pk = self.kwargs.get("post_id")
