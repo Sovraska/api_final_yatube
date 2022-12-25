@@ -85,8 +85,8 @@ class TestPostAPI:
 
     def test_posts_get_paginated(self, user_client, post, post_2,
                                  another_post):
-        limit = 3
-        offset = 0
+        limit = 2
+        offset = 2
         url = f'{self.post_list_url}?limit={limit}&offset={offset}'
         response = user_client.get(url)
         assert response.status_code == 200, (
